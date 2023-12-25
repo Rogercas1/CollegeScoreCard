@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 # Specify the folder containing CSV files
-folder_path = '/Users/'
+folder_path = '/Users/rogercastillo/Downloads/data'
 
 # Specify the output folder for processed CSV files
 # output_folder_path = '/Users/'
@@ -33,6 +33,7 @@ def process_dataframe(df):
     "NUMBRANCH",
     "PREDDEG",
     "HIGHDEG",
+    "CONTROL"
     "REGION",
     "LOCALE",
     "LOCALE2",
@@ -535,5 +536,5 @@ threshold = 0.8
 thresh_value = int(threshold * len(final_df))
 df = final_df.dropna(axis=1, thresh=thresh_value)
 # Adjust Path
-output_excel_path = '/Users/'
+output_excel_path = '/Users/rogercastillo/Git/CollegeScoreCard-1/Merged/Merged.xlsx'
 df.to_excel(output_excel_path, index=False)
